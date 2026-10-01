@@ -1,0 +1,29 @@
+{
+ "period": "founding",
+ "run_at": "2026-10-01T05:34:43",
+ "sources": [
+  {
+   "source": "OpenAlex: works citing anchors",
+   "ok": true,
+   "count": 9235,
+   "note": "",
+   "fail_streak": 0
+  },
+  {
+   "source": "Semantic Scholar: works citing anchors",
+   "ok": true,
+   "count": 3291,
+   "note": "",
+   "fail_streak": 0
+  }
+ ],
+ "stats": {
+  "harvested": 12526,
+  "dropped_negative": 2,
+  "duplicates": 5055,
+  "failed_gate": 450,
+  "new": 7019,
+  "citing": 7019,
+  "screened": false
+ }
+}

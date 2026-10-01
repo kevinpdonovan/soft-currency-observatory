@@ -11,6 +11,7 @@ anchors:
     cited_by_count: 1048
     score: 1.0
     check: false
+    s2_id: ec36f2b3cbf4ae4489b06b451f7ce88127df0f46
   guyer-1995:
     id: W602784359
     also:
@@ -19,6 +20,7 @@ anchors:
     manual: true
     check: false
     cited_by_count: 324
+    s2_id: 1a281854391e8db5a7f1c46041cb78043fa57938
   hart-1986:
     id: W2796044394
     also: []
@@ -27,6 +29,7 @@ anchors:
     cited_by_count: 408
     score: 1.0
     check: false
+    s2_id: 871208a21e94d2687012e618091712ac1894ca82
   parry-bloch-1989:
     id: W940597186
     also:
@@ -37,6 +40,7 @@ anchors:
     manual: true
     check: false
     cited_by_count: 1727
+    s2_id: f2796dd5e16b481cec9bc8881da00cac33246914
   shipton-1989:
     id: W1980694719
     also: []
@@ -45,6 +49,7 @@ anchors:
     cited_by_count: 268
     score: 1.0
     check: false
+    s2_id: 45bc8836ae71c4ae533a8317a1ce77fd60e5882f
   hutchinson-1992:
     id: W2104765701
     also: []
@@ -53,6 +58,7 @@ anchors:
     cited_by_count: 127
     score: 1.0
     check: false
+    s2_id: 6c743d7a86a4f9cfb393ade69869ca10f7d2a90c
   maurer-2006:
     id: W2151376089
     also: []
@@ -61,6 +67,7 @@ anchors:
     cited_by_count: 516
     score: 1.0
     check: false
+    s2_id: cd52cfb1fa5acabcb9ba8b84fc874957a9221274
   hart-ortiz-2014:
     id: W2138114649
     also: []
@@ -69,6 +76,7 @@ anchors:
     cited_by_count: 181
     score: 1.0
     check: false
+    s2_id: 9f1674ea6358bfb5737fd826d394e13bc9606e25
   lemon-1998:
     id: W2059181516
     also: []
@@ -78,6 +86,7 @@ anchors:
     cited_by_count: 143
     score: 1.0
     check: false
+    s2_id: 13ed3ae4c4ea773e9ff3f4e48f8cb3edd4db0801
   truitt-2013:
     id: W4405608306
     also:
@@ -86,6 +95,7 @@ anchors:
     manual: true
     check: false
     cited_by_count: 86
+    s2_id: d31b8fe3256d39359042034f7284cad72f5f7e28
   peebles-2011:
     id: W315156238
     also:
@@ -94,6 +104,7 @@ anchors:
     manual: true
     check: false
     cited_by_count: 63
+    s2_id: 71f34a15e89642804296c30804e3ab22ff52f678
   roitman-2005:
     id: W4255064287
     also:
@@ -103,6 +114,7 @@ anchors:
     manual: true
     check: false
     cited_by_count: 1204
+    s2_id: 960ad127fd6f8bacf6729c84cb0318d5fd33600b
   neiburg-2006:
     id: W2114206258
     also: []
@@ -111,6 +123,7 @@ anchors:
     cited_by_count: 62
     score: 1.0
     check: false
+    s2_id: 4ff1c59879750f42cda6ac8a56f341014df57e77
   luzzi-wilkis-2018:
     id: W2809674565
     also: []
@@ -118,6 +131,7 @@ anchors:
     manual: true
     check: false
     cited_by_count: 22
+    s2_id: 298a17dc70aaed738366e9fdbe76ad4f2956d65b
   jones-2010:
     id: W2080821977
     also: []
@@ -126,6 +140,7 @@ anchors:
     cited_by_count: 242
     score: 0.854
     check: false
+    s2_id: 06137ede092170dbaa01b5077b32b7e96f029489
   kuroda-2008:
     id: W2124410629
     also: []
@@ -135,6 +150,7 @@ anchors:
     cited_by_count: 49
     score: 1.0
     check: false
+    s2_id: 23db51d58b7bcc53552391da759c1e2c3ea1127b
   holmes-2014:
     id: W1530286258
     also:
@@ -143,6 +159,7 @@ anchors:
     manual: true
     check: false
     cited_by_count: 405
+    s2_id: d1893e7c50ce16353f6c17f5e0388239e0f5a2c7
   riles-2011:
     id: W4235516364
     also:
@@ -151,6 +168,7 @@ anchors:
     manual: true
     check: false
     cited_by_count: 601
+    s2_id: d9fcec9c15d042c1b77c2fc55718f0955b6ea92d
   dodd-2014:
     id: W253920946
     also: []
@@ -159,6 +177,7 @@ anchors:
     cited_by_count: 373
     score: 1.0
     check: false
+    s2_id: d24e999b2f9dfc67242991f58a637af2b886d11d
   hopkins-1970:
     id: W97404233
     also: []
@@ -167,6 +186,7 @@ anchors:
     cited_by_count: 74
     score: 1.0
     check: false
+    s2_id: 9331266e699eb9f38ede9a7026f67f06802db6bd
   mwangi-2001:
     id: W2127750936
     also: []
@@ -176,6 +196,7 @@ anchors:
     cited_by_count: 51
     score: 1.0
     check: false
+    s2_id: c34099e5db1112da191f41b534df9d201ceb2eb7
   krozewski-2001:
     id: W2504798669
     also:
@@ -184,6 +205,7 @@ anchors:
     manual: true
     check: false
     cited_by_count: 44
+    s2_id: c80363126d8f1c43ea31403f7f39d1e0b0aa910a
   strange-1971:
     id: W1980430734
     also:
@@ -195,6 +217,7 @@ anchors:
     manual: true
     check: false
     cited_by_count: 422
+    s2_id: 8416d7cc92158d46954b5a2d7752429f84590787
   schenk-2010:
     id: W2272021127
     also:
@@ -204,6 +227,7 @@ anchors:
     manual: true
     check: false
     cited_by_count: 124
+    s2_id: e8a5e50647225b0354a525c6e2feb0cbb8c95c83
   helleiner-2003:
     id: W2076484169
     also:
@@ -213,6 +237,7 @@ anchors:
     manual: true
     check: false
     cited_by_count: 495
+    s2_id: 6a79e7bceef6c7dff19b95c36086c28fdfb58878
   pigeaud-sylla-2021:
     id: W3133150818
     also: []
@@ -220,6 +245,7 @@ anchors:
     manual: true
     check: false
     cited_by_count: 1
+    s2_id: 60385be151ad857735c13be88469bfbe8c28d7fb
   cohen-1998:
     id: W1491331654
     also: []
@@ -227,6 +253,7 @@ anchors:
     manual: true
     check: false
     cited_by_count: 422
+    s2_id: cd70e44a44b18d1b5a8a8bbe031e178ce0ca54f2
   kaltenbrunner-2015:
     id: W2252940454
     also: []
@@ -235,6 +262,7 @@ anchors:
     cited_by_count: 140
     score: 1.0
     check: false
+    s2_id: 8d318996a6e26261e56f69cebecc06c190bde8d5
   kaltenbrunner-painceira-2015:
     id: W2142288378
     also: []
@@ -244,6 +272,7 @@ anchors:
     cited_by_count: 124
     score: 1.0
     check: false
+    s2_id: 51506a4f9c64d2adc83aefba797ec41bc0a5761f
   fritz-paula-prates-2018:
     id: W2892223864
     also: []
@@ -252,6 +281,7 @@ anchors:
     cited_by_count: 79
     score: 1.0
     check: false
+    s2_id: 96f6646bcda27d972c5e8af9a69f3708f7cace0b
   deconti-prates-plihon-2014:
     id: W2091818342
     also: []
@@ -259,6 +289,7 @@ anchors:
     manual: true
     check: false
     cited_by_count: 52
+    s2_id: 51062f377abd6dc2f9eaa4209a1336988e4ff2eb
   alami-etal-2023:
     id: W3185133529
     also: []
@@ -267,6 +298,7 @@ anchors:
     cited_by_count: 233
     score: 1.0
     check: false
+    s2_id: dad3f42136a652f341c819f5661bb3e6d6a39d93
 authors:
   Jane I. Guyer:
     id: A5003675868
