@@ -1,29 +1,58 @@
 {
- "period": "founding",
- "run_at": "2026-10-01T05:34:43",
+ "period": "2026-09",
+ "run_at": "2026-10-01T11:42:09",
  "sources": [
   {
    "source": "OpenAlex: works citing anchors",
    "ok": true,
-   "count": 9235,
+   "count": 455,
    "note": "",
    "fail_streak": 0
   },
   {
    "source": "Semantic Scholar: works citing anchors",
    "ok": true,
-   "count": 3291,
+   "count": 451,
+   "note": "",
+   "fail_streak": 0
+  },
+  {
+   "source": "Google Scholar citation alerts",
+   "ok": true,
+   "count": 0,
+   "note": "not configured (no IMAP_USER / IMAP_PASSWORD secrets)",
+   "fail_streak": 0
+  },
+  {
+   "source": "OpenAlex: keyword searches",
+   "ok": true,
+   "count": 784,
+   "note": "",
+   "fail_streak": 0
+  },
+  {
+   "source": "OpenAlex: watched journals",
+   "ok": true,
+   "count": 192,
+   "note": "",
+   "fail_streak": 0
+  },
+  {
+   "source": "OpenAlex: watched authors",
+   "ok": true,
+   "count": 5,
    "note": "",
    "fail_streak": 0
   }
  ],
  "stats": {
-  "harvested": 12526,
-  "dropped_negative": 2,
-  "duplicates": 5055,
-  "failed_gate": 450,
-  "new": 7019,
-  "citing": 7019,
+  "harvested": 1887,
+  "dropped_negative": 7,
+  "duplicates": 452,
+  "already_seen": 529,
+  "failed_gate": 837,
+  "new": 62,
+  "citing": 47,
   "screened": false
  }
 }
