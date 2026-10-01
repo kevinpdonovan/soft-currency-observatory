@@ -13,11 +13,10 @@ anchors:
     check: false
   guyer-1995:
     id: W602784359
-    also: []
-    matched: 'Money Matters: Instability, Values and Social Payments in the Modern History of West African Communities'
-    year: 1996
-    cited_by_count: 225
-    score: 1.0
+    also:
+    - W2587841287
+    matched: 'Money Matters (book; second record merged)'
+    manual: true
     check: false
   hart-1986:
     id: W2796044394
@@ -28,12 +27,13 @@ anchors:
     score: 1.0
     check: false
   parry-bloch-1989:
-    id: W2795836556
-    also: []
-    matched: Money and the Morality of Exchange
-    year: 1990
-    cited_by_count: 576
-    score: 1.0
+    id: W940597186
+    also:
+    - W2795836556
+    - W2059277899
+    - W2610858565
+    matched: 'Money and the Morality of Exchange (book; 3 split records merged)'
+    manual: true
     check: false
   shipton-1989:
     id: W1980694719
@@ -77,29 +77,26 @@ anchors:
     score: 1.0
     check: false
   truitt-2013:
-    id: W1986721259
+    id: W4405608306
     also:
-    - W4405608306
-    matched: Dreaming of money in Ho Chi Minh City
-    year: 2013
-    cited_by_count: 51
-    score: 1.0
-    check: true
+    - W1986721259
+    matched: 'Dreaming of Money in Ho Chi Minh City (book; Choice record merged)'
+    manual: true
+    check: false
   peebles-2011:
     id: W315156238
-    also: []
-    matched: 'The Euro and Its Rivals: Currency and the Construction of a Transnational City'
-    year: 2011
-    cited_by_count: 54
-    score: 1.0
+    also:
+    - W2342698490
+    matched: 'The Euro and Its Rivals (2 records merged)'
+    manual: true
     check: false
   roitman-2005:
-    id: W1556515631
-    also: []
-    matched: 'Fiscal Disobedience: An Anthropology of Economic Regulation in Central Africa'
-    year: 2004
-    cited_by_count: 439
-    score: 1.0
+    id: W4255064287
+    also:
+    - W1556515631
+    - W85217055
+    matched: 'Fiscal Disobedience (book; 2 split records merged)'
+    manual: true
     check: false
   neiburg-2006:
     id: W2114206258
@@ -112,12 +109,9 @@ anchors:
   luzzi-wilkis-2018:
     id: W2809674565
     also: []
-    matched: 'Soybean, bricks, dollars, and the reality of money: Multiple monies during currency exchange restrictions
-      in Argentina (2011–15)'
-    year: 2018
-    cited_by_count: 22
-    score: 1.0
-    check: true
+    matched: 'Soybean, bricks, dollars (checked)'
+    manual: true
+    check: false
   jones-2010:
     id: W2080821977
     also: []
@@ -137,20 +131,18 @@ anchors:
     check: false
   holmes-2014:
     id: W1530286258
-    also: []
-    matched: 'Economy of Words: Communicative Imperatives in Central Banks'
-    year: 2013
-    cited_by_count: 225
-    score: 1.0
+    also:
+    - W4251590235
+    matched: 'Economy of Words (2 book records merged)'
+    manual: true
     check: false
   riles-2011:
-    id: W4230690555
-    also: []
-    matched: 'Collateral knowledge: legal reasoning in the global financial markets'
-    year: 2011
-    cited_by_count: 70
-    score: 0.75
-    check: true
+    id: W4235516364
+    also:
+    - W4230690555
+    matched: 'Collateral Knowledge (book; Choice record merged)'
+    manual: true
+    check: false
   dodd-2014:
     id: W253920946
     also: []
@@ -177,56 +169,50 @@ anchors:
     score: 1.0
     check: false
   krozewski-2001:
-    id: W616906950
-    also: []
-    matched: 'Money and the end of empire : British international economic policy and the colonies, 1947-58'
-    year: 2001
-    cited_by_count: 14
-    score: 1.0
+    id: W2504798669
+    also:
+    - W616906950
+    matched: 'Money and the End of Empire (book; second record merged)'
+    manual: true
     check: false
   strange-1971:
     id: W1980430734
     also:
+    - W2331730833
     - W2321737900
-    matched: 'Sterling and British policy : a political study of an international currency in decline'
-    year: 1971
-    cited_by_count: 88
-    score: 1.0
-    check: true
+    - W2606613564
+    - W2334374159
+    matched: 'Sterling and British Policy (book; 4 review records carrying misattributed citations merged)'
+    manual: true
+    check: false
   schenk-2010:
-    id: W1737949979
+    id: W2272021127
     also:
+    - W1737949979
     - W2331167962
-    matched: 'The decline of sterling: managing the retreat of an international currency, 1945-1992'
-    year: 2011
-    cited_by_count: 86
-    score: 0.75
-    check: true
+    matched: 'The Decline of Sterling (book; 2 review records carrying citations merged)'
+    manual: true
+    check: false
   helleiner-2003:
-    id: W4241377464
-    also: []
-    matched: 'The Making of National Money: Territorial Currencies in Historical Perspective'
-    year: 2003
-    cited_by_count: 171
-    score: 1.0
+    id: W2076484169
+    also:
+    - W4241377464
+    - W4243835159
+    matched: 'The Making of National Money (book; 2 split records merged)'
+    manual: true
     check: false
   pigeaud-sylla-2021:
-    id: W2971375214
+    id: W3133150818
     also: []
-    matched: 'Towards a Political Economy of Monetary Dependency: The Case of the CFA Franc in West Africa'
-    year: 2019
-    cited_by_count: 22
-    score: 0.481
-    check: true
+    matched: 'Africa''s Last Colonial Currency (book; first run matched the wrong work)'
+    manual: true
+    check: false
   cohen-1998:
     id: W1491331654
-    also:
-    - W4239564557
-    matched: The Geography of Money
-    year: 2000
-    cited_by_count: 422
-    score: 0.925
-    check: true
+    also: []
+    matched: 'The Geography of Money (book; 1999 chapter removed)'
+    manual: true
+    check: false
   kaltenbrunner-2015:
     id: W2252940454
     also: []
@@ -255,12 +241,9 @@ anchors:
   deconti-prates-plihon-2014:
     id: W2091818342
     also: []
-    matched: A hierarquia monetária e suas implicações para as taxas de câmbio e de juros e a política econômica
-      dos países periféricos
-    year: 2014
-    cited_by_count: 52
-    score: 1.0
-    check: true
+    matched: 'A hierarquia monetária (checked)'
+    manual: true
+    check: false
   alami-etal-2023:
     id: W3185133529
     also: []
