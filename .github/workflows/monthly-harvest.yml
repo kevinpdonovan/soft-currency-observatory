@@ -1,0 +1,50 @@
+# On the 1st of each month: sweep citation indexes, update the corpus, open a review issue.
+name: Monthly harvest
+on:
+  schedule:
+    - cron: "23 5 1 * *"     # 1st of the month, 05:23 UTC
+  workflow_dispatch: {}
+permissions:
+  contents: write
+  issues: write
+concurrency: { group: repo-write, cancel-in-progress: false }
+jobs:
+  harvest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12", cache: pip }
+      - run: pip install -r requirements.txt
+      - name: Harvest
+        id: harvest
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          OPENALEX_API_KEY: ${{ secrets.OPENALEX_API_KEY }}
+          SEMANTIC_SCHOLAR_API_KEY: ${{ secrets.SEMANTIC_SCHOLAR_API_KEY }}
+          CONTACT_EMAIL: ${{ vars.CONTACT_EMAIL }}
+          TAGGER_MODEL: ${{ vars.TAGGER_MODEL }}
+          IMAP_HOST: ${{ vars.IMAP_HOST }}
+          IMAP_USER: ${{ secrets.IMAP_USER }}
+          IMAP_PASSWORD: ${{ secrets.IMAP_PASSWORD }}
+        run: |
+          path=$(python -m observatory harvest)
+          echo "review=$path" >> "$GITHUB_OUTPUT"
+          echo "period=$(basename $(dirname $path))" >> "$GITHUB_OUTPUT"
+      - name: Save corpus and run data
+        run: |
+          git config user.name "observatory-bot"
+          git config user.email "observatory-bot@users.noreply.github.com"
+          git add -A data config
+          git commit -m "Harvest ${{ steps.harvest.outputs.period }}" || echo "nothing to commit"
+          git pull --rebase && git push
+      - name: Open review issue
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REVIEWER: ${{ vars.REVIEWER }}
+        run: |
+          gh label create monthly-review --color E8341C --description "Monthly review queue" --force
+          args=(--title "Monthly review: ${{ steps.harvest.outputs.period }}" --label monthly-review --body-file "${{ steps.harvest.outputs.review }}")
+          if [ -n "$REVIEWER" ]; then args+=(--assignee "$REVIEWER"); fi
+          gh issue create "${args[@]}"
