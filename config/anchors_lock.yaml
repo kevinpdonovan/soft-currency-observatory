@@ -1,0 +1,498 @@
+# What each anchor, watched author and watched journal matched in OpenAlex.
+# Written automatically on the first run. Check entries marked check: true.
+# To fix a wrong match, replace the id by hand (search https://openalex.org)
+# and set manual: true so it is never overwritten; set id: null to skip.
+anchors:
+  guyer-2004:
+    id: W652586060
+    also: []
+    matched: 'Marginal Gains: Monetary Transactions in Atlantic Africa'
+    year: 2004
+    cited_by_count: 1048
+    score: 1.0
+    check: false
+  guyer-1995:
+    id: W602784359
+    also: []
+    matched: 'Money Matters: Instability, Values and Social Payments in the Modern History of West African Communities'
+    year: 1996
+    cited_by_count: 225
+    score: 1.0
+    check: false
+  hart-1986:
+    id: W2796044394
+    also: []
+    matched: Heads or Tails? Two Sides of the Coin
+    year: 1986
+    cited_by_count: 408
+    score: 1.0
+    check: false
+  parry-bloch-1989:
+    id: W2795836556
+    also: []
+    matched: Money and the Morality of Exchange
+    year: 1990
+    cited_by_count: 576
+    score: 1.0
+    check: false
+  shipton-1989:
+    id: W1980694719
+    also: []
+    matched: 'Bitter money : cultural economy and some African meanings of forbidden commodities'
+    year: 1989
+    cited_by_count: 268
+    score: 1.0
+    check: false
+  hutchinson-1992:
+    id: W2104765701
+    also: []
+    matched: the cattle of money and the cattle of girls among the Nuer, 1930–83
+    year: 1992
+    cited_by_count: 127
+    score: 1.0
+    check: false
+  maurer-2006:
+    id: W2151376089
+    also: []
+    matched: The Anthropology of Money
+    year: 2006
+    cited_by_count: 516
+    score: 1.0
+    check: false
+  hart-ortiz-2014:
+    id: W2138114649
+    also: []
+    matched: 'The Anthropology of Money and Finance: Between Ethnography and World History'
+    year: 2014
+    cited_by_count: 181
+    score: 1.0
+    check: false
+  lemon-1998:
+    id: W2059181516
+    also: []
+    matched: '"Your Eyes Are Green like Dollars": Counterfeit Cash, National Substance, and Currency Apartheid in
+      1990s Russia'
+    year: 1998
+    cited_by_count: 143
+    score: 1.0
+    check: false
+  truitt-2013:
+    id: W1986721259
+    also:
+    - W4405608306
+    matched: Dreaming of money in Ho Chi Minh City
+    year: 2013
+    cited_by_count: 51
+    score: 1.0
+    check: true
+  peebles-2011:
+    id: W315156238
+    also: []
+    matched: 'The Euro and Its Rivals: Currency and the Construction of a Transnational City'
+    year: 2011
+    cited_by_count: 54
+    score: 1.0
+    check: false
+  roitman-2005:
+    id: W1556515631
+    also: []
+    matched: 'Fiscal Disobedience: An Anthropology of Economic Regulation in Central Africa'
+    year: 2004
+    cited_by_count: 439
+    score: 1.0
+    check: false
+  neiburg-2006:
+    id: W2114206258
+    also: []
+    matched: 'Inflation: Economists and Economic Cultures in Brazil and Argentina'
+    year: 2006
+    cited_by_count: 62
+    score: 1.0
+    check: false
+  luzzi-wilkis-2018:
+    id: W2809674565
+    also: []
+    matched: 'Soybean, bricks, dollars, and the reality of money: Multiple monies during currency exchange restrictions
+      in Argentina (2011–15)'
+    year: 2018
+    cited_by_count: 22
+    score: 1.0
+    check: true
+  jones-2010:
+    id: W2080821977
+    also: []
+    matched: '‘Nothing is Straight in Zimbabwe’: The Rise of theKukiya-kiyaEconomy 2000–2008'
+    year: 2010
+    cited_by_count: 242
+    score: 0.854
+    check: false
+  kuroda-2008:
+    id: W2124410629
+    also: []
+    matched: 'Concurrent but non-integrable currency circuits: complementary relationships among monies in modern
+      China and other regions'
+    year: 2008
+    cited_by_count: 49
+    score: 1.0
+    check: false
+  holmes-2014:
+    id: W1530286258
+    also: []
+    matched: 'Economy of Words: Communicative Imperatives in Central Banks'
+    year: 2013
+    cited_by_count: 225
+    score: 1.0
+    check: false
+  riles-2011:
+    id: W4230690555
+    also: []
+    matched: 'Collateral knowledge: legal reasoning in the global financial markets'
+    year: 2011
+    cited_by_count: 70
+    score: 0.75
+    check: true
+  dodd-2014:
+    id: W253920946
+    also: []
+    matched: The Social Life of Money
+    year: 2014
+    cited_by_count: 373
+    score: 1.0
+    check: false
+  hopkins-1970:
+    id: W97404233
+    also: []
+    matched: 'The Creation of a Colonial Monetary System: The Origins of the West African Currency Board'
+    year: 1970
+    cited_by_count: 74
+    score: 1.0
+    check: false
+  mwangi-2001:
+    id: W2127750936
+    also: []
+    matched: 'Of Coins and Conquest: The East African Currency Board, The Rupee Crisis, and the Problem of Colonialism
+      in the East African Protectorate'
+    year: 2001
+    cited_by_count: 51
+    score: 1.0
+    check: false
+  krozewski-2001:
+    id: W616906950
+    also: []
+    matched: 'Money and the end of empire : British international economic policy and the colonies, 1947-58'
+    year: 2001
+    cited_by_count: 14
+    score: 1.0
+    check: false
+  strange-1971:
+    id: W1980430734
+    also:
+    - W2321737900
+    matched: 'Sterling and British policy : a political study of an international currency in decline'
+    year: 1971
+    cited_by_count: 88
+    score: 1.0
+    check: true
+  schenk-2010:
+    id: W1737949979
+    also:
+    - W2331167962
+    matched: 'The decline of sterling: managing the retreat of an international currency, 1945-1992'
+    year: 2011
+    cited_by_count: 86
+    score: 0.75
+    check: true
+  helleiner-2003:
+    id: W4241377464
+    also: []
+    matched: 'The Making of National Money: Territorial Currencies in Historical Perspective'
+    year: 2003
+    cited_by_count: 171
+    score: 1.0
+    check: false
+  pigeaud-sylla-2021:
+    id: W2971375214
+    also: []
+    matched: 'Towards a Political Economy of Monetary Dependency: The Case of the CFA Franc in West Africa'
+    year: 2019
+    cited_by_count: 22
+    score: 0.481
+    check: true
+  cohen-1998:
+    id: W1491331654
+    also:
+    - W4239564557
+    matched: The Geography of Money
+    year: 2000
+    cited_by_count: 422
+    score: 0.925
+    check: true
+  kaltenbrunner-2015:
+    id: W2252940454
+    also: []
+    matched: 'A post Keynesian framework of exchange rate determination: a Minskyan approach'
+    year: 2015
+    cited_by_count: 140
+    score: 1.0
+    check: false
+  kaltenbrunner-painceira-2015:
+    id: W2142288378
+    also: []
+    matched: 'Developing countries’ changing nature of financial integration and new forms of external vulnerability:
+      the Brazilian experience'
+    year: 2014
+    cited_by_count: 124
+    score: 1.0
+    check: false
+  fritz-paula-prates-2018:
+    id: W2892223864
+    also: []
+    matched: 'Global currency hierarchy and national policy space: a framework for peripheral economies'
+    year: 2018
+    cited_by_count: 79
+    score: 1.0
+    check: false
+  deconti-prates-plihon-2014:
+    id: W2091818342
+    also: []
+    matched: A hierarquia monetária e suas implicações para as taxas de câmbio e de juros e a política econômica
+      dos países periféricos
+    year: 2014
+    cited_by_count: 52
+    score: 1.0
+    check: true
+  alami-etal-2023:
+    id: W3185133529
+    also: []
+    matched: 'International financial subordination: a critical research agenda'
+    year: 2022
+    cited_by_count: 233
+    score: 1.0
+    check: false
+authors:
+  Jane I. Guyer:
+    id: A5003675868
+    matched: Jane I. Guyer
+    institution: ''
+    check: false
+  Keith Hart:
+    id: A5068295164
+    matched: Keith Hart
+    institution: ''
+    check: true
+  Bill Maurer:
+    id: A5069225752
+    matched: Bill Maurer
+    institution: University of California, Irvine
+    check: true
+  Gustav Peebles:
+    id: A5026663211
+    matched: Gustav Peebles
+    institution: Stockholm University
+    check: false
+  Federico Neiburg:
+    id: A5061456753
+    matched: Federico Neiburg
+    institution: Universidade Federal do Rio de Janeiro
+    check: true
+  Ariel Wilkis:
+    id: A5054133391
+    matched: Ariel Wilkis
+    institution: Consejo Nacional de Investigaciones Científicas y Técnicas
+    check: true
+  Mariana Luzzi:
+    id: A5055414754
+    matched: Mariana Luzzi
+    institution: Consejo Nacional de Investigaciones Científicas y Técnicas
+    check: false
+  Ilias Alami:
+    id: A5027232358
+    matched: Ilias Alami
+    institution: University of Cambridge
+    check: false
+  Bruno Bonizzi:
+    id: A5077028724
+    matched: Bruno Bonizzi
+    institution: City St George's, University of London
+    check: false
+  Annina Kaltenbrunner:
+    id: A5013325515
+    matched: Annina Kaltenbrunner
+    institution: University of Leeds
+    check: false
+  Kai Koddenbrock:
+    id: A5049440301
+    matched: Kai Koddenbrock
+    institution: ''
+    check: false
+  Ndongo Samba Sylla:
+    id: A5035928977
+    matched: Ndongo Samba Sylla
+    institution: ''
+    check: true
+  Daniela Magalhães Prates:
+    id: A5076947734
+    matched: Daniela Magalhães Prates
+    institution: ''
+    check: true
+  Eric Helleiner:
+    id: A5068626309
+    matched: Eric Helleiner
+    institution: ''
+    check: true
+  Catherine R. Schenk:
+    id: A5007915322
+    matched: Catherine R. Schenk
+    institution: ''
+    check: true
+  Kevin P. Donovan:
+    id: A5080167557
+    matched: Kevin P. Donovan
+    institution: University of Edinburgh
+    check: false
+journals:
+  Economic Anthropology:
+    id: S4210239638
+    matched: Economic Anthropology
+    check: false
+  Journal of the Royal Anthropological Institute:
+    id: S65256140
+    matched: Journal of the Royal Anthropological Institute
+    check: false
+  American Ethnologist:
+    id: S114801684
+    matched: American Ethnologist
+    check: false
+  Cultural Anthropology:
+    id: S22506700
+    matched: Cultural Anthropology
+    check: false
+  American Anthropologist:
+    id: S102499938
+    matched: American Anthropologist
+    check: false
+  'HAU: Journal of Ethnographic Theory':
+    id: S2764491276
+    matched: Hau Journal of Ethnographic Theory
+    check: false
+  Current Anthropology:
+    id: S165709033
+    matched: Current Anthropology
+    check: false
+  Focaal:
+    id: S28021636
+    matched: Focaal
+    check: false
+  Social Anthropology:
+    id: S20076162
+    matched: Social Anthropology
+    check: false
+  Annual Review of Anthropology:
+    id: S195167216
+    matched: Annual Review of Anthropology
+    check: false
+  Economy and Society:
+    id: S25250876
+    matched: Economy and Society
+    check: false
+  Journal of Cultural Economy:
+    id: S206312523
+    matched: Journal of Cultural Economy
+    check: false
+  Finance and Society:
+    id: S4210168463
+    matched: Finance and Society
+    check: false
+  Socio-Economic Review:
+    id: S147547362
+    matched: Socio-Economic Review
+    check: false
+  Comparative Studies in Society and History:
+    id: S21304105
+    matched: Comparative Studies in Society and History
+    check: false
+  Journal of African History:
+    id: S3091228
+    matched: The Journal of African History
+    check: true
+  Africa:
+    id: S128375914
+    matched: Africa
+    check: false
+  African Affairs:
+    id: S33869021
+    matched: African Affairs
+    check: false
+  Journal of Modern African Studies:
+    id: S40252047
+    matched: The Journal of Modern African Studies
+    check: true
+  Journal of Eastern African Studies:
+    id: S30572693
+    matched: Journal of Eastern African Studies
+    check: false
+  Journal of Southern African Studies:
+    id: S84445930
+    matched: Journal of Southern African Studies
+    check: false
+  Review of African Political Economy:
+    id: S36169284
+    matched: Review of African Political Economy
+    check: false
+  African Studies Review:
+    id: S196489185
+    matched: African Studies Review
+    check: false
+  Review of International Political Economy:
+    id: S2875300
+    matched: Review of International Political Economy
+    check: false
+  New Political Economy:
+    id: S146242404
+    matched: New Political Economy
+    check: false
+  Competition & Change:
+    id: S187200255
+    matched: Competition & Change
+    check: false
+  Development and Change:
+    id: S137192870
+    matched: Development and Change
+    check: false
+  'Environment and Planning A: Economy and Space':
+    id: S87933477
+    matched: Environment and Planning A Economy and Space
+    check: false
+  Antipode:
+    id: S47624153
+    matched: Antipode
+    check: false
+  Finance and Space:
+    id: S4390296615
+    matched: Finance and Space
+    check: false
+  Financial History Review:
+    id: S100930738
+    matched: Financial History Review
+    check: false
+  Economic History Review:
+    id: S165492527
+    matched: The Economic History Review
+    check: true
+  Business History Review:
+    id: S88020226
+    matched: The Business History Review
+    check: true
+  Journal of Imperial and Commonwealth History: null
+  Cambridge Journal of Economics:
+    id: S67103694
+    matched: Cambridge Journal of Economics
+    check: false
+  Review of Keynesian Economics:
+    id: S2764655866
+    matched: Review of Keynesian Economics
+    check: false
+  Journal of Post Keynesian Economics:
+    id: S151404345
+    matched: Journal of Post Keynesian Economics
+    check: false
