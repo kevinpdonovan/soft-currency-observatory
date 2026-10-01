@@ -160,17 +160,27 @@ def resolve_anchors(anchors: list[dict], lock: dict, log=print) -> None:
                            "score": s, "check": bool(s < 0.8 or a.get("verify") or extra)}
         log(f"  anchor {a['key']}: {short(w['id'])} ({s})")
         time.sleep(0.15)
-    # refresh citation counts (used for weights)
-    ids = {info["id"]: k for k, info in table.items() if info and info.get("id")}
-    idl = list(ids)
+    # refresh citation counts (used for weights). Books are often split across several
+    # OpenAlex records (the book, Choice and journal reviews carrying its citations), so the
+    # count is the sum over the primary record and everything listed under "also".
+    owner = {}
+    for k, info in table.items():
+        if info and info.get("id"):
+            for x in [info["id"]] + list(info.get("also") or []):
+                owner[x] = k
+    totals = {}
+    idl = list(owner)
     for i in range(0, len(idl), 50):
         try:
             js = get("/works", {"filter": "openalex:" + "|".join(idl[i:i + 50]), "per-page": 50,
                                 "select": "id,cited_by_count"})
             for w in js.get("results", []):
-                table[ids[short(w["id"])]]["cited_by_count"] = w.get("cited_by_count", 0)
+                k = owner[short(w["id"])]
+                totals[k] = totals.get(k, 0) + (w.get("cited_by_count", 0) or 0)
         except Exception:
             pass
+    for k, n in totals.items():
+        table[k]["cited_by_count"] = n
 
 
 def anchor_ids(lock: dict) -> dict[str, str]:
