@@ -15,9 +15,10 @@ anchors:
     id: W602784359
     also:
     - W2587841287
-    matched: 'Money Matters (book; second record merged)'
+    matched: Money Matters (book; second record merged)
     manual: true
     check: false
+    cited_by_count: 324
   hart-1986:
     id: W2796044394
     also: []
@@ -32,9 +33,10 @@ anchors:
     - W2795836556
     - W2059277899
     - W2610858565
-    matched: 'Money and the Morality of Exchange (book; 3 split records merged)'
+    matched: Money and the Morality of Exchange (book; 3 split records merged)
     manual: true
     check: false
+    cited_by_count: 1727
   shipton-1989:
     id: W1980694719
     also: []
@@ -80,24 +82,27 @@ anchors:
     id: W4405608306
     also:
     - W1986721259
-    matched: 'Dreaming of Money in Ho Chi Minh City (book; Choice record merged)'
+    matched: Dreaming of Money in Ho Chi Minh City (book; Choice record merged)
     manual: true
     check: false
+    cited_by_count: 86
   peebles-2011:
     id: W315156238
     also:
     - W2342698490
-    matched: 'The Euro and Its Rivals (2 records merged)'
+    matched: The Euro and Its Rivals (2 records merged)
     manual: true
     check: false
+    cited_by_count: 63
   roitman-2005:
     id: W4255064287
     also:
     - W1556515631
     - W85217055
-    matched: 'Fiscal Disobedience (book; 2 split records merged)'
+    matched: Fiscal Disobedience (book; 2 split records merged)
     manual: true
     check: false
+    cited_by_count: 1204
   neiburg-2006:
     id: W2114206258
     also: []
@@ -109,9 +114,10 @@ anchors:
   luzzi-wilkis-2018:
     id: W2809674565
     also: []
-    matched: 'Soybean, bricks, dollars (checked)'
+    matched: Soybean, bricks, dollars (checked)
     manual: true
     check: false
+    cited_by_count: 22
   jones-2010:
     id: W2080821977
     also: []
@@ -133,16 +139,18 @@ anchors:
     id: W1530286258
     also:
     - W4251590235
-    matched: 'Economy of Words (2 book records merged)'
+    matched: Economy of Words (2 book records merged)
     manual: true
     check: false
+    cited_by_count: 405
   riles-2011:
     id: W4235516364
     also:
     - W4230690555
-    matched: 'Collateral Knowledge (book; Choice record merged)'
+    matched: Collateral Knowledge (book; Choice record merged)
     manual: true
     check: false
+    cited_by_count: 601
   dodd-2014:
     id: W253920946
     also: []
@@ -172,9 +180,10 @@ anchors:
     id: W2504798669
     also:
     - W616906950
-    matched: 'Money and the End of Empire (book; second record merged)'
+    matched: Money and the End of Empire (book; second record merged)
     manual: true
     check: false
+    cited_by_count: 44
   strange-1971:
     id: W1980430734
     also:
@@ -182,37 +191,42 @@ anchors:
     - W2321737900
     - W2606613564
     - W2334374159
-    matched: 'Sterling and British Policy (book; 4 review records carrying misattributed citations merged)'
+    matched: Sterling and British Policy (book; 4 review records carrying misattributed citations merged)
     manual: true
     check: false
+    cited_by_count: 422
   schenk-2010:
     id: W2272021127
     also:
     - W1737949979
     - W2331167962
-    matched: 'The Decline of Sterling (book; 2 review records carrying citations merged)'
+    matched: The Decline of Sterling (book; 2 review records carrying citations merged)
     manual: true
     check: false
+    cited_by_count: 124
   helleiner-2003:
     id: W2076484169
     also:
     - W4241377464
     - W4243835159
-    matched: 'The Making of National Money (book; 2 split records merged)'
+    matched: The Making of National Money (book; 2 split records merged)
     manual: true
     check: false
+    cited_by_count: 495
   pigeaud-sylla-2021:
     id: W3133150818
     also: []
-    matched: 'Africa''s Last Colonial Currency (book; first run matched the wrong work)'
+    matched: Africa's Last Colonial Currency (book; first run matched the wrong work)
     manual: true
     check: false
+    cited_by_count: 1
   cohen-1998:
     id: W1491331654
     also: []
-    matched: 'The Geography of Money (book; 1999 chapter removed)'
+    matched: The Geography of Money (book; 1999 chapter removed)
     manual: true
     check: false
+    cited_by_count: 422
   kaltenbrunner-2015:
     id: W2252940454
     also: []
@@ -241,9 +255,10 @@ anchors:
   deconti-prates-plihon-2014:
     id: W2091818342
     also: []
-    matched: 'A hierarquia monetária (checked)'
+    matched: A hierarquia monetária (checked)
     manual: true
     check: false
+    cited_by_count: 52
   alami-etal-2023:
     id: W3185133529
     also: []
