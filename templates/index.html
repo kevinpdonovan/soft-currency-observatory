@@ -7,7 +7,7 @@
 <section class="grid g3">
   <div class="cell">
     <div class="lab"><span>Premise</span><span>01</span></div>
-    <p class="big">{% for part in content.premise.strip().split(' soft ') %}{{ part }}{% if not loop.last %} <em>soft</em> {% endif %}{% endfor %}</p>
+    <p class="big">{% for part in content.premise.strip().split(' soft') %}{{ part }}{% if not loop.last %} <em>soft</em>{% endif %}{% endfor %}</p>
     {% for p in content.home_intro|paras %}<p class="body">{{ p }}</p>{% endfor %}
   </div>
   <div class="cell">
