@@ -1,7 +1,7 @@
 # Site settings
 title: "Soft Currency Observatory"
 short_title: "SCO"
-tagline: "In the long run, all currencies are soft"
+tagline: "In the long run, all currencies are soft."
 # Full URL once GitHub Pages is on, e.g. https://kevinpdonovan.github.io/soft-currency-observatory/
 base_url: "https://kevinpdonovan.github.io/soft-currency-observatory/"
 # true = search engines may index the site
