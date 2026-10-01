@@ -1,0 +1,14 @@
+name: Suggest a work
+description: Add a book, article or chapter to the next monthly accessions.
+title: "Suggestion: "
+labels: [suggestion]
+body:
+  - type: input
+    attributes: {label: Link, description: "DOI link or publisher page"}
+    validations: {required: true}
+  - type: input
+    attributes: {label: Title}
+  - type: input
+    attributes: {label: "Journal, publisher or outlet"}
+  - type: input
+    attributes: {label: Why it matters (one line)}
