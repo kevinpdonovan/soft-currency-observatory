@@ -1,12 +1,12 @@
 # Site settings
 title: "Soft Currency Observatory"
 short_title: "SCO"
-tagline: "Money that does not travel at par"
+tagline: "In the long run, all currencies are soft"
 # Full URL once GitHub Pages is on, e.g. https://kevinpdonovan.github.io/soft-currency-observatory/
-base_url: ""
+base_url: "https://kevinpdonovan.github.io/soft-currency-observatory/"
 # true = search engines may index the site
 public: true
-maintainer: "Soft Currency Observatory, University of Edinburgh"
+maintainer: "Soft Currency Observatory"
 contact_email: ""          # shown on Join and About
 join_url: ""               # e.g. a Microsoft/Google form. If blank, Join uses contact_email.
 newsletter_url: ""
