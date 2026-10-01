@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% from "macros.html" import item %}
+{% block main %}
+<section class="mast">
+  <h1>Soft<br><span class="outline">Currency</span><br>Observatory<span class="dot">.</span></h1>
+</section>
+<section class="grid g3">
+  <div class="cell">
+    <div class="lab"><span>Premise</span><span>01</span></div>
+    <p class="big">{% for part in content.premise.strip().split(' soft ') %}{{ part }}{% if not loop.last %} <em>soft</em> {% endif %}{% endfor %}</p>
+    {% for p in content.home_intro|paras %}<p class="body">{{ p }}</p>{% endfor %}
+  </div>
+  <div class="cell">
+    <div class="lab"><span>Archive: {{ latest.label if latest else 'new' }}</span><span>02</span></div>
+    {% if latest %}
+    <ol class="list">
+      {% for i in latest["items"][:6] %}
+      <li><span class="n">{{ '%02d'|format(loop.index) }}</span><div><a href="{{ i.url }}" class="scholarly" target="_blank" rel="noopener">{{ i.title }}</a><span class="by">{{ i.authors[:2]|join(', ') }}{% if i.year %}, {{ i.year }}{% endif %}</span></div></li>
+      {% endfor %}
+    </ol>
+    <p><a class="more" href="accessions/{{ latest.period }}.html">All {{ latest["items"]|length }} accessions →</a></p>
+    {% else %}
+    <p class="body muted">The first accessions appear after the founding review.</p>
+    {% endif %}
+  </div>
+  <div class="cell">
+    <div class="lab"><span>Seminar</span><span>03</span></div>
+    {% set s = upcoming[0] if upcoming else None %}
+    {% if s and s.date %}
+    <div class="date">{{ s.date[8:10] }}<sup>{{ s.date[5:7] }}</sup></div>
+    <p class="body"><strong>{{ s.speaker }}</strong>{% if s.affiliation %}, {{ s.affiliation }}{% endif %}<br>{{ s.title }}</p>
+    {% else %}
+    <div class="date">TBA<sup>WIP</sup></div>
+    <p class="body">{{ s.title if s else 'Works-in-progress seminar' }}. Pre-circulated paper.</p>
+    {% endif %}
+    <p><a class="more" href="seminar.html">Seminar →</a></p>
+  </div>
+</section>
+<section class="grid g1">
+  <div class="cell">
+    <div class="lab"><span>Term density: {{ latest.label if latest else 'corpus' }}</span><span>04</span></div>
+    <div class="terms">
+      {% for t in dens.top_new_terms %}<a href="density.html#t-{{ loop.index0 }}" class="{{ 'hh' if loop.index <= 2 else 'h' if loop.index <= 6 else '' }}">{{ t }}</a>{% endfor %}
+      {% if not dens.top_new_terms %}<span class="muted mono small">Appears after the first harvest.</span>{% endif %}
+    </div>
+  </div>
+</section>
+<section class="grid g4 counts">
+  <div class="cell"><div class="num">{{ n_anchors }}</div><p class="lab">Anchor works</p></div>
+  <div class="cell"><div class="num">{{ dens.n_citing }}</div><p class="lab">Works citing them</p></div>
+  <div class="cell"><div class="num">{{ accessions|sum(attribute='items', start=[])|length }}</div><p class="lab">In the archive</p></div>
+  <div class="cell"><div class="num">{{ dens.terms|length }}</div><p class="lab">Terms tracked</p></div>
+</section>
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block title %}About · {{ site.title }}{% endblock %}
+{% block main %}
+<section class="head"><p class="kick mono">About</p><h1>About</h1></section>
+<section class="grid g2">
+  <div class="cell prose">
+    {% for p in content.about|paras %}<p class="lede">{{ p }}</p>{% endfor %}
+    {% if site.contact_email %}<p class="mono"><a href="mailto:{{ site.contact_email }}">{{ site.contact_email }}</a></p>{% endif %}
+  </div>
+  <div class="cell prose" id="method">
+    <div class="lab"><span>How the archive is made</span><span>Method</span></div>
+    <p>Each month an automated sweep collects new scholarship from three citation indexes (OpenAlex, Semantic Scholar, and Google Scholar citation alerts) and from keyword searches, watched journals and watched authors. It keeps metadata only.</p>
+    <p><strong>Anchors.</strong> The sweep is organised around {{ n_anchors }} anchor works. A new work that cites one of them enters the corpus. Each anchor has a weight that falls as its total citation count rises: citing a narrowly read work says more about a new work than citing a famous one.</p>
+    <p><strong>Density.</strong> Each work gets a density score: the weights of the anchors it cites, plus {{ profile.scoring.term_weight }} for each tracked term in its title or abstract (up to {{ profile.scoring.term_cap }}), plus a small bonus for watched venues. Many records in anthropology and history lack abstracts, so citations carry more weight than terms.</p>
+    <p><strong>Trust.</strong> Venues are not ranked by citation metrics, which disadvantage anthropology and history. Instead: watched journals and authors; established scholarly publishers and university presses; open-access journals listed in DOAJ; a deny list of predatory publishers. Works from unknown venues are included only when they cite two or more anchors or are chosen by hand.</p>
+    <p><strong>Review.</strong> An AI screener rates relevance and drafts a one-line note; a person reviews every work before it is published here. Works cited again and again by the corpus are proposed as new anchors, so the canon can grow beyond what its editors already know.</p>
+    <p><strong>Limits.</strong> Citation indexes under-count books, chapters and non-English scholarship. Google Scholar alerts partly correct for books. Counts are indicative, not bibliometrics.</p>
+  </div>
+</section>
+{% if health.sources %}
+<section class="grid g1"><div class="cell">
+  <div class="lab"><span>Source health: last run {{ health.run_at[:10] }}</span><span>{{ '%02d'|format(health.sources|length) }}</span></div>
+  <div class="tablewrap"><table class="data">
+    <thead><tr><th>Source</th><th class="r">Records</th><th>Status</th></tr></thead>
+    <tbody>{% for h in health.sources %}<tr><td>{{ h.source }}</td><td class="r mono">{{ h.count }}</td><td class="mono small">{% if h.ok %}ok{% else %}<span class="flag">failing{% if h.fail_streak > 1 %} ×{{ h.fail_streak }}{% endif %}</span>{% endif %} {{ h.note }}</td></tr>{% endfor %}</tbody>
+  </table></div>
+</div></section>
+{% endif %}
+{% endblock %}

@@ -1,0 +1,32 @@
+# =====================================================================
+#  SOURCES: where the monthly sweep looks.
+#  kind: citing  = works that cite an anchor (the core of the Observatory)
+#        related = works found by keyword, watched journal or watched author
+# =====================================================================
+
+citing:
+  # Forward citations from OpenAlex. OpenAlex often adds citation links months
+  # after publication, so the sweep looks back over a long window and relies on
+  # the corpus to skip anything already seen.
+  - {name: "OpenAlex: works citing anchors", type: openalex_citing, lookback_months: 18, backfill_cap_per_anchor: 3000}
+  # Second citation index; better on some books and humanities venues.
+  # Optional secret SEMANTIC_SCHOLAR_API_KEY raises its rate limit.
+  - {name: "Semantic Scholar: works citing anchors", type: s2_citing, lookback_months: 18, backfill_cap_per_anchor: 1000}
+  # Google Scholar "new citations" alerts, one per anchor book, sent to the
+  # project inbox (see README → Google Scholar citation alerts). Best coverage
+  # for monographs. The anchor is recognised from the alert's subject line.
+  - name: "Google Scholar citation alerts"
+    type: email
+    from: "scholaralerts-noreply@google.com"
+    label: "Google Scholar"
+    min_title_len: 20
+
+related:
+  - {name: "OpenAlex: keyword searches", type: openalex, mode: queries, lookback_days: 45}
+  - {name: "OpenAlex: watched journals", type: openalex, mode: journals, lookback_days: 45}
+  - {name: "OpenAlex: watched authors", type: openalex, mode: authors, lookback_days: 60}
+
+# Older works cited again and again by the corpus that are not yet anchors.
+# They appear in each review as "candidate anchors".
+candidates:
+  - {name: "Co-citation candidates", type: cocitation, min_citing_works: 4, max_items: 10}

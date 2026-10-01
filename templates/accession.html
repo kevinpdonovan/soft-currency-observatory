@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% from "macros.html" import item %}
+{% block title %}{{ acc.label }} · {{ site.title }}{% endblock %}
+{% block main %}
+<section class="head"><p class="kick mono">Accessions</p><h1>{{ acc.label }}</h1>
+<p class="lede narrow">{{ acc["items"]|length }} works. <a href="{{ root }}archive.html">Search the whole archive →</a></p></section>
+{% for k, label in kinds.items() %}{% set its = acc.by_kind[k] %}{% if its %}
+<section class="grid g1"><div class="cell">
+  <div class="lab"><span>{{ label }}</span><span>{{ '%02d'|format(its|length) }}</span></div>
+  <ul class="works">{% for i in its %}{{ item(i, cite_of, root) }}{% endfor %}</ul>
+</div></section>
+{% endif %}{% endfor %}
+{% endblock %}

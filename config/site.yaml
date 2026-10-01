@@ -1,0 +1,18 @@
+# Site settings
+title: "Soft Currency Observatory"
+short_title: "SCO"
+tagline: "Money that does not travel at par"
+# Full URL once GitHub Pages is on, e.g. https://kevinpdonovan.github.io/soft-currency-observatory/
+base_url: ""
+# true = search engines may index the site
+public: true
+maintainer: "Soft Currency Observatory, University of Edinburgh"
+contact_email: ""          # shown on Join and About
+join_url: ""               # e.g. a Microsoft/Google form. If blank, Join uses contact_email.
+newsletter_url: ""
+
+# Library proxies: readers choose theirs in the footer; scholarly links are
+# rewritten through it. Verify each prefix with the library.
+library_proxies:
+  - label: "University of Edinburgh"
+    prefix: "https://ezproxy.is.ed.ac.uk/login?url="

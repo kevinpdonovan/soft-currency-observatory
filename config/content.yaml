@@ -1,0 +1,60 @@
+# =====================================================================
+#  SITE TEXT: everything on the Home, Research, Seminar, Join and About pages.
+#  Plain text; blank lines separate paragraphs. Placeholders are marked DRAFT.
+# =====================================================================
+
+premise: >
+  Every currency is soft somewhere. We study money that does not travel at par.
+
+home_intro: >
+  The Soft Currency Observatory is a research network and working archive on currencies
+  that are inconvertible, subordinate, unstable or confined to particular circuits, and
+  on the people, firms and states who live with them. Its core is economic anthropology,
+  in conversation with history, sociology, geography, politics and political economy.
+
+research:
+  intro: |
+    DRAFT. A paragraph on the project's argument: that softness is the ordinary condition of
+    money rather than a pathology of the periphery, and what follows from studying it
+    ethnographically and historically.
+  # Working areas. They organise the project's thinking; the archive does not sort by them.
+  areas:
+    - name: "Soft Currency Histories"
+      text: "DRAFT. Colonial and imperial monetary systems, currency boards, sterling and franc zones, decolonisation."
+    - name: "Instruments & Expertise"
+      text: "DRAFT. Exchange controls, central banking, conditionality, and the devices that manage softness."
+    - name: "Livelihoods & Property"
+      text: "DRAFT. Savings, remittances, land and other stores of value where money is not trusted to hold."
+    - name: "Soft Currency Worlds"
+      text: "DRAFT. How people make sense of and live with money that does not hold its value."
+    - name: "Politics"
+      text: "DRAFT. Currency hierarchy, monetary sovereignty and international financial subordination."
+
+seminar:
+  intro: |
+    A works-in-progress seminar. Papers are circulated a week in advance and read closely;
+    the author speaks for five minutes and the rest of the session is discussion.
+  format: "Hybrid · Edinburgh and online · roughly monthly in term"
+  # Add sessions here. date: YYYY-MM-DD. Past sessions stay listed.
+  sessions:
+    - date: ""
+      speaker: "To be announced"
+      affiliation: ""
+      title: "Session I"
+      place: "Edinburgh / online"
+
+join: |
+  The network is open to researchers at any career stage working on soft currencies in any
+  discipline. Members receive the monthly accessions, seminar papers in advance, and an
+  invitation to present work in progress.
+
+  To join, send a line about your work and a link to a profile or recent paper.
+
+about: |
+  DRAFT. Who convenes the Observatory, where it is based, and how to get in touch.
+
+people:
+  - name: "Kevin P. Donovan"
+    role: "Convenor"
+    affiliation: "University of Edinburgh"
+    url: ""

@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block title %}Seminar · {{ site.title }}{% endblock %}
+{% macro session(s) %}
+<li class="session">
+  <div class="sdate">{% if s.date %}<span class="d">{{ s.date[8:10] }}</span><span class="m mono">{{ s.date|monthyear }}</span>{% else %}<span class="d">TBA</span>{% endif %}</div>
+  <div><h2>{{ s.title }}</h2><p class="mono">{{ s.speaker }}{% if s.affiliation %} · {{ s.affiliation }}{% endif %}{% if s.place %} · {{ s.place }}{% endif %}</p>
+  {% if s.abstract %}<p>{{ s.abstract }}</p>{% endif %}</div>
+</li>
+{% endmacro %}
+{% block main %}
+<section class="head"><p class="kick mono">Works in progress</p><h1>Seminar</h1></section>
+<section class="grid g2">
+  <div class="cell prose">
+    {% for p in content.seminar.intro|paras %}<p class="lede">{{ p }}</p>{% endfor %}
+    <p class="mono">{{ content.seminar.format }}</p>
+    <p><a class="more" href="join.html">Join to receive papers →</a></p>
+  </div>
+  <div class="cell">
+    <div class="lab"><span>Upcoming</span><span>{{ '%02d'|format(upcoming|length) }}</span></div>
+    <ol class="sessions">{% for s in upcoming %}{{ session(s) }}{% endfor %}</ol>
+    {% if past %}
+    <div class="lab" style="margin-top:32px"><span>Past</span><span>{{ '%02d'|format(past|length) }}</span></div>
+    <ol class="sessions past">{% for s in past %}{{ session(s) }}{% endfor %}</ol>
+    {% endif %}
+  </div>
+</section>
+{% endblock %}

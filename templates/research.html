@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %}Research · {{ site.title }}{% endblock %}
+{% block main %}
+<section class="head"><p class="kick mono">Research</p><h1>Research</h1></section>
+<section class="grid g2">
+  <div class="cell prose">
+    {% for p in content.research.intro|paras %}<p class="lede">{{ p }}</p>{% endfor %}
+  </div>
+  <div class="cell">
+    <div class="lab"><span>Working areas</span><span>{{ '%02d'|format(content.research.areas|length) }}</span></div>
+    <ol class="areas">
+      {% for a in content.research.areas %}
+      <li><span class="n">{{ '%02d'|format(loop.index) }}</span><div><h2>{{ a.name }}</h2><p>{{ a.text }}</p></div></li>
+      {% endfor %}
+    </ol>
+  </div>
+</section>
+{% endblock %}

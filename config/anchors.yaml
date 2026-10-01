@@ -1,0 +1,195 @@
+# =====================================================================
+#  CITATION ANCHORS: the works whose citing literature the Observatory tracks.
+#
+#  This is NOT the Core Readings list (config/readings.yaml). An anchor earns
+#  its place by being *diagnostic*: citing it says something about a work.
+#  Very widely cited classics (Zelizer, Graeber, Simmel) are poor anchors
+#  because thousands of unrelated works cite them. They belong in Core
+#  Readings, or here with a low weight.
+#
+#  Fields
+#    key      short id used everywhere (never change once set)
+#    cite     how it appears on the site
+#    title / authors / year  used to find the work in OpenAlex on the first run
+#    doi      optional; the most reliable way to match
+#    weight   optional manual override (0–1). If omitted, it is computed from
+#             the work's total citation count: widely cited = lower weight.
+#    verify   true = I (Claude) was unsure of a bibliographic detail; check the
+#             match in config/anchors_lock.yaml after the first run.
+#
+#  After the first run, config/anchors_lock.yaml shows what each anchor
+#  matched in OpenAlex. Fix wrong matches there by hand.
+#  New anchors are added here when you tick a "candidate anchor" in a review.
+# =====================================================================
+
+anchors:
+  # --- economic anthropology of money and currency ------------------
+  - key: guyer-2004
+    cite: "Guyer, Marginal Gains (2004)"
+    title: "Marginal Gains: Monetary Transactions in Atlantic Africa"
+    authors: ["Jane I. Guyer"]
+    year: 2004
+  - key: guyer-1995
+    cite: "Guyer (ed.), Money Matters (1995)"
+    title: "Money Matters: Instability, Values and Social Payments in the Modern History of West African Communities"
+    authors: ["Jane I. Guyer"]
+    year: 1995
+  - key: hart-1986
+    cite: "Hart, 'Heads or Tails?' (1986)"
+    title: "Heads or Tails? Two Sides of the Coin"
+    authors: ["Keith Hart"]
+    year: 1986
+  - key: parry-bloch-1989
+    cite: "Parry & Bloch (eds), Money and the Morality of Exchange (1989)"
+    title: "Money and the Morality of Exchange"
+    authors: ["Jonathan Parry", "Maurice Bloch"]
+    year: 1989
+    weight: 0.2          # widely cited; weak signal on its own
+  - key: shipton-1989
+    cite: "Shipton, Bitter Money (1989)"
+    title: "Bitter Money: Cultural Economy and Some African Meanings of Forbidden Commodities"
+    authors: ["Parker Shipton"]
+    year: 1989
+  - key: hutchinson-1992
+    cite: "Hutchinson, 'The Cattle of Money and the Cattle of Girls' (1992)"
+    title: "The Cattle of Money and the Cattle of Girls among the Nuer, 1930-83"
+    authors: ["Sharon Hutchinson"]
+    year: 1992
+  - key: maurer-2006
+    cite: "Maurer, 'The Anthropology of Money' (2006)"
+    title: "The Anthropology of Money"
+    authors: ["Bill Maurer"]
+    year: 2006
+  - key: hart-ortiz-2014
+    cite: "Hart & Ortiz, 'The Anthropology of Money and Finance' (2014)"
+    title: "The Anthropology of Money and Finance: Between Ethnography and World History"
+    authors: ["Keith Hart", "Horacio Ortiz"]
+    year: 2014
+  - key: lemon-1998
+    cite: "Lemon, 'Your Eyes Are Green like Dollars' (1998)"
+    title: "Your Eyes Are Green like Dollars: Counterfeit Cash, National Substance, and Currency Apartheid in 1990s Russia"
+    authors: ["Alaina Lemon"]
+    year: 1998
+  - key: truitt-2013
+    cite: "Truitt, Dreaming of Money in Ho Chi Minh City (2013)"
+    title: "Dreaming of Money in Ho Chi Minh City"
+    authors: ["Allison Truitt"]
+    year: 2013
+  - key: peebles-2011
+    cite: "Peebles, The Euro and Its Rivals (2011)"
+    title: "The Euro and Its Rivals: Currency and the Construction of a Transnational City"
+    authors: ["Gustav Peebles"]
+    year: 2011
+  - key: roitman-2005
+    cite: "Roitman, Fiscal Disobedience (2005)"
+    title: "Fiscal Disobedience: An Anthropology of Economic Regulation in Central Africa"
+    authors: ["Janet Roitman"]
+    year: 2005
+  - key: neiburg-2006
+    cite: "Neiburg, 'Inflation' (2006)"
+    title: "Inflation: Economists and Economic Cultures in Brazil and Argentina"
+    authors: ["Federico Neiburg"]
+    year: 2006
+  - key: luzzi-wilkis-2018
+    cite: "Luzzi & Wilkis, 'Soybean, bricks, dollars' (2018)"
+    title: "Soybean, bricks, dollars, and the reality of money: Multiple monies during currency exchange restrictions in Argentina (2011-15)"
+    authors: ["Mariana Luzzi", "Ariel Wilkis"]
+    year: 2018
+    verify: true
+  - key: jones-2010
+    cite: "Jones, 'Nothing is straight in Zimbabwe' (2010)"
+    title: "Nothing is Straight in Zimbabwe: The Rise of the Kukiya-kiya Economy 2000-2008"
+    authors: ["Jeremy L. Jones"]
+    year: 2010
+  - key: kuroda-2008
+    cite: "Kuroda, 'Concurrent but non-integrable currency circuits' (2008)"
+    title: "Concurrent but non-integrable currency circuits: complementary relationships among monies in modern China and other regions"
+    authors: ["Akinobu Kuroda"]
+    year: 2008
+
+  # --- expertise and instruments -------------------------------------
+  - key: holmes-2014
+    cite: "Holmes, Economy of Words (2014)"
+    title: "Economy of Words: Communicative Imperatives in Central Banks"
+    authors: ["Douglas R. Holmes"]
+    year: 2014
+  - key: riles-2011
+    cite: "Riles, Collateral Knowledge (2011)"
+    title: "Collateral Knowledge: Legal Reasoning in the Global Financial Markets"
+    authors: ["Annelise Riles"]
+    year: 2011
+  - key: dodd-2014
+    cite: "Dodd, The Social Life of Money (2014)"
+    title: "The Social Life of Money"
+    authors: ["Nigel Dodd"]
+    year: 2014
+
+  # --- colonial and imperial monetary history ------------------------
+  - key: hopkins-1970
+    cite: "Hopkins, 'The creation of a colonial monetary system' (1970)"
+    title: "The Creation of a Colonial Monetary System: The Origins of the West African Currency Board"
+    authors: ["A. G. Hopkins"]
+    year: 1970
+  - key: mwangi-2001
+    cite: "Mwangi, 'Of Coins and Conquest' (2001)"
+    title: "Of Coins and Conquest: The East African Currency Board, the Rupee Crisis, and the Problem of Colonialism in the East African Protectorate"
+    authors: ["Wambui Mwangi"]
+    year: 2001
+  - key: krozewski-2001
+    cite: "Krozewski, Money and the End of Empire (2001)"
+    title: "Money and the End of Empire: British International Economic Policy and the Colonies, 1947-58"
+    authors: ["Gerold Krozewski"]
+    year: 2001
+  - key: strange-1971
+    cite: "Strange, Sterling and British Policy (1971)"
+    title: "Sterling and British Policy: A Political Study of an International Currency in Decline"
+    authors: ["Susan Strange"]
+    year: 1971
+  - key: schenk-2010
+    cite: "Schenk, The Decline of Sterling (2010)"
+    title: "The Decline of Sterling: Managing the Retreat of an International Currency, 1945-1992"
+    authors: ["Catherine R. Schenk"]
+    year: 2010
+  - key: helleiner-2003
+    cite: "Helleiner, The Making of National Money (2003)"
+    title: "The Making of National Money: Territorial Currencies in Historical Perspective"
+    authors: ["Eric Helleiner"]
+    year: 2003
+  - key: pigeaud-sylla-2021
+    cite: "Pigeaud & Sylla, Africa's Last Colonial Currency (2021)"
+    title: "Africa's Last Colonial Currency: The CFA Franc Story"
+    authors: ["Fanny Pigeaud", "Ndongo Samba Sylla"]
+    year: 2021
+
+  # --- currency hierarchy and international subordination ------------
+  - key: cohen-1998
+    cite: "Cohen, The Geography of Money (1998)"
+    title: "The Geography of Money"
+    authors: ["Benjamin J. Cohen"]
+    year: 1998
+  - key: kaltenbrunner-2015
+    cite: "Kaltenbrunner, 'A post Keynesian framework of exchange rate determination' (2015)"
+    title: "A post Keynesian framework of exchange rate determination: a Minskyan approach"
+    authors: ["Annina Kaltenbrunner"]
+    year: 2015
+  - key: kaltenbrunner-painceira-2015
+    cite: "Kaltenbrunner & Painceira, 'Developing countries' changing nature of financial integration' (2015)"
+    title: "Developing countries' changing nature of financial integration and new forms of external vulnerability: the Brazilian experience"
+    authors: ["Annina Kaltenbrunner", "Juan Pablo Painceira"]
+    year: 2015
+  - key: fritz-paula-prates-2018
+    cite: "Fritz, de Paula & Prates, 'Global currency hierarchy and national policy space' (2018)"
+    title: "Global currency hierarchy and national policy space: a framework for peripheral economies"
+    authors: ["Barbara Fritz", "Luiz Fernando de Paula", "Daniela Magalhães Prates"]
+    year: 2018
+  - key: deconti-prates-plihon-2014
+    cite: "De Conti, Prates & Plihon, 'A hierarquia monetária' (2014)"
+    title: "A hierarquia monetária e suas implicações para as taxas de câmbio e de juros e a política econômica dos países periféricos"
+    authors: ["Bruno De Conti", "Daniela Magalhães Prates", "Dominique Plihon"]
+    year: 2014
+    verify: true
+  - key: alami-etal-2023
+    cite: "Alami et al., 'International financial subordination' (2023)"
+    title: "International financial subordination: a critical research agenda"
+    authors: ["Ilias Alami", "Carolina Alves", "Bruno Bonizzi", "Annina Kaltenbrunner", "Kai Koddenbrock", "Ingrid Kvangraven", "Jeff Powell"]
+    year: 2023

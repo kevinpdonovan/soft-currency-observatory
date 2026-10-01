@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% from "macros.html" import spark %}
+{% block title %}Density · {{ site.title }}{% endblock %}
+{% block main %}
+<section class="head"><p class="kick mono">Instruments</p><h1>Density</h1>
+<p class="lede narrow">The Observatory's corpus holds {{ dens.n_works }} works, {{ dens.n_citing }} of which cite at least one anchor. Below: which anchors the literature leans on, and how often the tracked vocabulary appears. Counts include works not selected for the archive. <a href="about.html#method">Method →</a></p></section>
+
+<section class="grid g1"><div class="cell">
+  <div class="lab"><span>Anchors</span><span>{{ '%02d'|format(dens.anchors|length) }}</span></div>
+  <div class="tablewrap"><table class="data">
+    <thead><tr><th>Anchor</th><th class="r">Weight</th><th class="r">Citing works in corpus</th><th class="r">New{% if accessions %}: {{ accessions[0].label }}{% endif %}</th><th class="r">Citations overall</th></tr></thead>
+    <tbody>
+    {% for r in dens.anchors %}
+    <tr><td>{{ r.cite }}{% if not r.matched %} <span class="flag">Unmatched</span>{% elif r.check %} <span class="flag ghost">Check match</span>{% endif %}
+      {% for L in lineages if L.key == r.key %} <a class="tag" href="lineage/{{ r.key }}.html">Lineage</a>{% endfor %}</td>
+      <td class="r mono"><span class="bar" style="--w:{{ (r.weight * 100)|round(0) }}%"></span>{{ '%.2f'|format(r.weight) }}</td>
+      <td class="r mono">{{ r.corpus }}</td><td class="r mono{% if r.new %} hot{% endif %}">{{ r.new or '' }}</td>
+      <td class="r mono muted">{{ r.cited_by if r.cited_by is not none else '' }}</td></tr>
+    {% endfor %}
+    </tbody>
+  </table></div>
+</div></section>
+
+<section class="grid g1"><div class="cell">
+  <div class="lab"><span>Terms</span><span>{{ '%02d'|format(dens.terms|length) }}</span></div>
+  <div class="tablewrap"><table class="data">
+    <thead><tr><th>Term</th><th class="r">Works</th><th class="r">New</th><th>{{ dens.years[0] }}–{{ dens.years[-1] }}</th><th class="r">Last 3 yrs vs before</th></tr></thead>
+    <tbody>
+    {% for r in dens.terms %}
+    <tr id="t-{{ loop.index0 }}"><td>{{ r.term }}</td><td class="r mono">{{ r.total }}</td><td class="r mono{% if r.new %} hot{% endif %}">{{ r.new or '' }}</td>
+      <td>{{ spark(r.series) }}</td>
+      <td class="r mono">{% if r.trend is none %}<span class="muted">—</span>{% elif r.trend >= 99 %}new{% else %}×{{ '%.1f'|format(r.trend) }}{% endif %}</td></tr>
+    {% endfor %}
+    </tbody>
+  </table></div>
+</div></section>
+{% if lineages %}
+<section class="grid g1"><div class="cell">
+  <div class="lab"><span>Lineages</span><span>{{ '%02d'|format(lineages|length) }}</span></div>
+  <ol class="list">{% for L in lineages %}<li><span class="n">{{ L.n_descendants }}</span><div><a href="lineage/{{ L.key }}.html">{{ L.label }}</a><span class="by">generated {{ L.generated }}</span></div></li>{% endfor %}</ol>
+</div></section>
+{% endif %}
+{% endblock %}

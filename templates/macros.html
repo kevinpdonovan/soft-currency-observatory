@@ -1,0 +1,25 @@
+{% macro spark(series, w=120, h=28) -%}
+{% set mx = (series|max) if series else 0 %}
+{% if series and mx > 0 %}
+<svg class="spark" viewBox="0 0 {{ w }} {{ h }}" width="{{ w }}" height="{{ h }}" role="img" aria-label="Works per year, last {{ series|length }} years: {{ series|join(', ') }}">
+  {% set bw = w / series|length %}
+  {% for v in series %}
+  <rect x="{{ (loop.index0 * bw + 1)|round(1) }}" y="{{ (h - (v / mx) * h)|round(1) }}" width="{{ (bw - 2)|round(1) }}" height="{{ ((v / mx) * h)|round(1) if v else 0 }}"{% if loop.revindex <= 3 %} class="hot"{% endif %}></rect>
+  {% endfor %}
+</svg>
+{% else %}<span class="muted mono small">—</span>{% endif %}
+{%- endmacro %}
+
+{% macro item(i, cite_of, root='') -%}
+<li class="work">
+  <a class="work-title scholarly" href="{{ i.url }}" target="_blank" rel="noopener">{{ i.title }}</a>
+  <div class="work-meta mono">
+    {% if i.featured %}<span class="flag">Featured</span>{% endif %}
+    {% if i.authors %}<span>{{ i.authors[:3]|join(', ') }}{% if i.authors|length > 3 %} et al.{% endif %}</span>{% endif %}
+    {% if i.venue or i.source %}<span>{{ i.venue or i.source }}</span>{% endif %}
+    {% if i.year or i.date %}<span>{{ i.year or i.date[:4] }}</span>{% endif %}
+  </div>
+  {% if i.note %}<p class="work-note">{{ i.note }}</p>{% endif %}
+  {% if i.anchors %}<p class="work-cites mono">Cites: {% for a in i.anchors %}{{ cite_of.get(a, a) }}{% if not loop.last %}; {% endif %}{% endfor %}</p>{% endif %}
+</li>
+{%- endmacro %}

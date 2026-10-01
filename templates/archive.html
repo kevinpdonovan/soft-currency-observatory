@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block title %}Archive · {{ site.title }}{% endblock %}
+{% block main %}
+<section class="head"><p class="kick mono">Archive</p><h1>Archive</h1>
+<p class="lede narrow">Every work accessioned since the founding review. Most cite one or more <a href="density.html">anchor works</a>; the rest were found by keyword, watched journal or watched author. Each month's additions are also kept as an <a href="#months">accession list</a>.</p></section>
+<section class="filters">
+  <input id="s-q" type="search" placeholder="Search titles, authors, venues, notes" aria-label="Search">
+  <select id="s-kind" aria-label="Kind"><option value="">All works</option>{% for k, l in kinds.items() %}<option value="{{ k }}">{{ l }}</option>{% endfor %}</select>
+  <select id="s-anchor" aria-label="Cites"><option value="">Citing any anchor</option>{% for k, c in cite_of.items() %}<option value="{{ k }}">{{ c }}</option>{% endfor %}</select>
+  <select id="s-period" aria-label="Month"><option value="">All months</option>{% for a in accessions %}<option value="{{ a.period }}">{{ a.label }}</option>{% endfor %}</select>
+  <span id="s-count" class="mono small" aria-live="polite"></span>
+</section>
+<ul id="s-results" class="works"></ul>
+<p id="s-empty" class="muted body" hidden>No works match.</p>
+<p class="pad"><button id="s-more" type="button" hidden>Show more</button></p>
+<section class="grid g1" id="months">
+  <div class="cell">
+    <div class="lab"><span>Accessions by month</span><span>{{ '%02d'|format(accessions|length) }}</span></div>
+    <ol class="list">{% for a in accessions %}<li><span class="n">{{ a["items"]|length }}</span><div><a href="accessions/{{ a.period }}.html">{{ a.label }}</a></div></li>{% else %}<li><div class="muted">None yet.</div></li>{% endfor %}</ol>
+  </div>
+</section>
+<script src="static/search.js"></script>
+{% endblock %}

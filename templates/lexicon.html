@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% from "macros.html" import spark %}
+{% block title %}Lexicon · {{ site.title }}{% endblock %}
+{% block main %}
+<section class="head"><p class="kick mono">Lexicon</p><h1>Lexicon</h1>
+<p class="lede narrow">Working definitions of the terms the project turns on. Counts are works in the Observatory's corpus that use the term in a title or abstract; the bars show the last twelve years.</p></section>
+<section class="lex">
+{% for e in lexicon.entries %}
+<article class="entry" id="{{ e.term|lower|replace(' ', '-') }}">
+  <h2>{{ e.term }}{% if e.status == 'draft' %} <span class="flag">Draft</span>{% endif %}</h2>
+  {% for p in e.paras %}<p>{{ p }}</p>{% endfor %}
+  {% if e.count is not none %}<div class="entry-count mono"><span>{{ e.count }} works</span>{{ spark(e.series) }}</div>{% endif %}
+</article>
+{% endfor %}
+</section>
+{% endblock %}

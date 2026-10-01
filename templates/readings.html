@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %}Core Readings · {{ site.title }}{% endblock %}
+{% block main %}
+<section class="head"><p class="kick mono">Canon, provisionally</p><h1>Core Readings</h1></section>
+{% for g in readings.groups %}
+<section class="grid g1"><div class="cell">
+  <div class="lab"><span>{{ g.name }}</span><span>{{ '%02d'|format(g["items"]|length) }}</span></div>
+  <ol class="readings">{% for r in g["items"] %}<li><span class="n">{{ '%02d'|format(loop.index) }}</span><div>{{ r.cite }}{% if r.url %} <a href="{{ r.url }}" class="scholarly">link</a>{% endif %}{% if r.anchor %} <a class="tag" href="archive.html?anchor={{ r.anchor }}" title="Works in the archive that cite this">cited in archive</a>{% endif %}</div></li>{% endfor %}</ol>
+</div></section>
+{% endfor %}
+{% endblock %}

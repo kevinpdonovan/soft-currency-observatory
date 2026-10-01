@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+{% if not site.public %}<meta name="robots" content="noindex, nofollow">{% endif %}
+<title>{% block title %}{{ site.title }}{% endblock %}</title>
+<meta name="description" content="{{ content.premise|trim }}">
+<link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ root }}feed.xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;700;800;900&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ root }}static/style.css">
+</head>
+<body data-page="{{ page }}">
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <a class="brand" href="{{ root }}index.html">{{ site.short_title }}</a>
+  <nav aria-label="Main">
+    {% set nav = [('research','Research'),('seminar','Seminar'),('archive','Archive'),('readings','Core Readings'),('lexicon','Lexicon'),('density','Density'),('join','Join'),('about','About')] %}
+    {% for slug, label in nav %}<a href="{{ root }}{{ slug }}.html"{% if page == slug %} aria-current="page"{% endif %}>{{ label }}</a>{% endfor %}
+  </nav>
+</header>
+<main id="main">
+{% block main %}{% endblock %}
+</main>
+<footer class="foot">
+  <div class="cell">
+    <p class="lab">{{ site.title }}</p>
+    <p>{{ site.maintainer }}. Links go to the original publishers; nothing here republishes their text. Notes are machine-drafted and reviewed by hand.</p>
+  </div>
+  <div class="cell">
+    <p class="lab">Library access</p>
+    <select id="proxy-select" data-proxies='{{ proxies_json }}' aria-label="Library proxy">
+      <option value="">Direct links</option>
+    </select>
+  </div>
+  <div class="cell">
+    <p class="lab">Follow</p>
+    <p><a href="{{ root }}feed.xml">RSS: monthly accessions</a>{% if site.newsletter_url %}<br><a href="{{ site.newsletter_url }}">Newsletter</a>{% endif %}</p>
+    <p class="mono small">Built {{ built }}</p>
+  </div>
+</footer>
+<script src="{{ root }}static/app.js"></script>
+</body>
+</html>

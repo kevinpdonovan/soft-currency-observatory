@@ -1,0 +1,44 @@
+# =====================================================================
+#  LEXICON: short entries on key terms. DRAFT definitions by Claude, to be
+#  rewritten. "tracks" names a line in observatory.yaml -> terms (its first
+#  spelling). The page then shows how many works in the corpus use the term.
+#  status: draft | final   (drafts are marked on the site)
+# =====================================================================
+
+entries:
+  - term: "Soft currency"
+    tracks: "soft currency"
+    status: draft
+    text: "A money that others will not accept at par, or at all, outside its home circuit. The Observatory treats softness as a relation, not a property: every currency is soft somewhere."
+  - term: "Convertibility"
+    tracks: "convertibility"
+    status: draft
+    text: "The promise that one money will be exchanged for another, or for gold, at a stated rate. Suspending it is among the oldest instruments of monetary statecraft."
+  - term: "Currency hierarchy"
+    tracks: "currency hierarchy"
+    status: draft
+    text: "The ordering of national monies by their acceptance as means of payment, unit of account and store of value internationally. Currencies at the bottom pay a liquidity premium for being held at all."
+  - term: "Dollarization"
+    tracks: "dollarization"
+    status: draft
+    text: "The use of a foreign currency, usually the US dollar, alongside or instead of the national one, whether officially adopted or improvised from below."
+  - term: "Parallel rate"
+    tracks: "parallel exchange rate"
+    status: draft
+    text: "The price of foreign currency outside the official market. The gap between official and parallel rates is a running measure of how soft a currency has become."
+  - term: "Currency board"
+    tracks: "currency board"
+    status: draft
+    text: "A monetary authority that issues local money only against full reserves of an anchor currency. The colonial form in British Africa tied local money to sterling."
+  - term: "Blocked balances"
+    tracks: "blocked balances"
+    status: draft
+    text: "Holdings of a currency that their owners may not freely convert or withdraw. Sterling balances accumulated by colonies and dominions during the Second World War are the classic case."
+  - term: "Monetary repertoires"
+    tracks: "monetary repertoires"
+    status: draft
+    text: "The set of monies, conversions and stores of value people move between in practice, and the skills needed to do so."
+  - term: "Earmarking"
+    tracks: "earmarking"
+    status: draft
+    text: "Designating money for particular uses or relations, so that nominally identical sums are not interchangeable."

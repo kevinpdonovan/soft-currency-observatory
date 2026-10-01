@@ -1,0 +1,254 @@
+# =====================================================================
+#  OBSERVATORY PROFILE: what the monthly sweep looks for, and how it judges.
+#  Edit freely on GitHub (pencil icon → Commit). Changes apply at the next run.
+# =====================================================================
+
+project:
+  name: "Soft Currency Observatory"
+  # Briefs the AI screener. Keep it to a paragraph; update as the project moves.
+  brief: >
+    A research network on soft currencies: money that does not travel at par, whether
+    because it is inconvertible, subordinate in the international currency hierarchy,
+    unstable, or confined to particular circuits. The core is economic anthropology
+    (monetary repertoires, conversion, value, livelihoods), in conversation with history,
+    sociology, geography, politics and heterodox political economy (currency hierarchy,
+    international financial subordination, monetary sovereignty), with particular depth on
+    Africa and the Global South. We want scholarship on how people, firms and states live
+    with, manage, theorise and contest soft currencies: colonial and imperial monetary
+    systems, exchange controls and parallel markets, dollarization, remittances and savings,
+    monetary expertise and instruments, and the meanings and experience of money.
+    We do NOT want mainstream exchange-rate forecasting, econometric macro without a
+    historical, institutional or ethnographic argument, crypto price commentary, or US
+    campaign-finance "soft money".
+
+# ---------------------------------------------------------------------
+#  TERMS: the vocabulary whose density the Observatory tracks.
+#  Matching is case-insensitive on titles and abstracts; accents ignored.
+#  Run the "Suggest terms" workflow to get candidates drawn from the anchor
+#  literature (data/terms_suggested.yaml), then copy the good ones here.
+#  A line "a | b | c" counts spelling variants as one term (reported as "a").
+# ---------------------------------------------------------------------
+terms:
+  - soft currency | soft currencies
+  - hard currency | hard currencies
+  - convertibility | inconvertible | inconvertibility | non-convertible
+  - currency hierarchy | monetary hierarchy | hierarchy of currencies | hierarquia monetária
+  - international financial subordination | financial subordination
+  - subordinate financialization | subordinate financialisation
+  - monetary sovereignty | currency sovereignty | souveraineté monétaire
+  - monetary dependency | monetary dependence
+  - dollarization | dollarisation | de-dollarization | de-dollarisation
+  - currency substitution
+  - parallel exchange rate | parallel market | black market rate | informal exchange
+  - exchange control | exchange controls | capital controls
+  - currency board | currency boards
+  - sterling area
+  - franc zone | cfa franc | franc cfa
+  - blocked balances | blocked accounts | sterling balances
+  - counterpart funds | pl 480 | public law 480
+  - colonial currency | colonial money | colonial monetary
+  - devaluation
+  - hyperinflation
+  - foreign exchange shortage | forex shortage | dollar shortage
+  - remittances
+  - multiple currencies | currency multiplicity | multiple monies | plural monies
+  - monetary repertoires | repertoires of money
+  - earmarking | earmarked money
+  - liquidity premium
+  - balance of payments
+  - special drawing rights
+  - swap lines
+  - local currency | complementary currency | community currency
+  - mobile money
+  - stablecoin | stablecoins
+  - central bank digital currency | cbdc
+  - imf conditionality
+  - cowries | manillas | cowrie
+
+# Titles containing these are dropped before anything else.
+negative_keywords:
+  - soft money
+  - campaign finance
+  - soft power
+  - soft robot
+  - soft tissue
+  - soft skills
+  - soft computing
+  - soft matter
+  - soft drink
+  - cryptocurrency price prediction
+  - bitcoin price
+  - forecasting exchange rates using
+  - deep learning
+  - neural network
+
+# ---------------------------------------------------------------------
+#  KEYWORD SEARCHES: catch relevant work that does not cite an anchor.
+#  Run against OpenAlex, limited to the social sciences, economics and
+#  humanities. Results must still contain >= 2 distinct TERMS above
+#  (or 1 term in a watched journal) to reach the review.
+# ---------------------------------------------------------------------
+research_queries:
+  - "soft currency"
+  - "currency hierarchy"
+  - "monetary sovereignty Africa"
+  - "dollarization ethnography"
+  - "parallel exchange rate"
+  - "exchange controls colonial"
+  - "currency board Africa"
+  - "sterling area"
+  - "CFA franc"
+  - "anthropology of money"
+  - "multiple currencies"
+  - "international financial subordination"
+  - "foreign exchange shortage"
+  - "hyperinflation everyday life"
+
+# Journals whose new articles are always swept (and trusted).
+watch_journals:
+  - "Economic Anthropology"
+  - "Journal of the Royal Anthropological Institute"
+  - "American Ethnologist"
+  - "Cultural Anthropology"
+  - "American Anthropologist"
+  - "HAU: Journal of Ethnographic Theory"
+  - "Current Anthropology"
+  - "Focaal"
+  - "Social Anthropology"
+  - "Annual Review of Anthropology"
+  - "Economy and Society"
+  - "Journal of Cultural Economy"
+  - "Finance and Society"
+  - "Socio-Economic Review"
+  - "Comparative Studies in Society and History"
+  - "Journal of African History"
+  - "Africa"
+  - "African Affairs"
+  - "Journal of Modern African Studies"
+  - "Journal of Eastern African Studies"
+  - "Journal of Southern African Studies"
+  - "Review of African Political Economy"
+  - "African Studies Review"
+  - "Review of International Political Economy"
+  - "New Political Economy"
+  - "Competition & Change"
+  - "Development and Change"
+  - "Environment and Planning A: Economy and Space"
+  - "Antipode"
+  - "Finance and Space"
+  - "Financial History Review"
+  - "Economic History Review"
+  - "Business History Review"
+  - "Journal of Imperial and Commonwealth History"
+  - "Cambridge Journal of Economics"
+  - "Review of Keynesian Economics"
+  - "Journal of Post Keynesian Economics"
+
+# Authors whose new work is always swept (and trusted). Matched in OpenAlex on
+# the first run; check config/anchors_lock.yaml -> authors.
+watch_authors:
+  - "Jane I. Guyer"
+  - "Keith Hart"
+  - "Bill Maurer"
+  - "Gustav Peebles"
+  - "Federico Neiburg"
+  - "Ariel Wilkis"
+  - "Mariana Luzzi"
+  - "Ilias Alami"
+  - "Bruno Bonizzi"
+  - "Annina Kaltenbrunner"
+  - "Kai Koddenbrock"
+  - "Ndongo Samba Sylla"
+  - "Daniela Magalhães Prates"
+  - "Eric Helleiner"
+  - "Catherine R. Schenk"
+  - "Kevin P. Donovan"
+
+# ---------------------------------------------------------------------
+#  TRUST: how the sweep judges venues and publishers, without h-index.
+#  Levels, best to worst:
+#    watched     watched journal, or a work by a watched author
+#    trusted     publisher on trusted_publishers (university presses,
+#                established scholarly houses), or an OA journal in DOAJ
+#    series      working-paper series on trusted_series
+#    repository  preprint server / institutional repository
+#    unknown     no signal either way (never pre-ticked unless it cites 2+ anchors)
+#    denied      venue or publisher on a deny list: dropped
+#  A work that cites two or more anchors is treated as engaged with the field
+#  and can be pre-ticked even from an unknown venue.
+# ---------------------------------------------------------------------
+trust:
+  trusted_publishers:
+    - "University Press"         # matches any university press
+    - "University of Chicago"
+    - "Cambridge University"
+    - "Oxford University"
+    - "Duke"
+    - "Routledge"
+    - "Taylor & Francis"
+    - "Informa"
+    - "Wiley"
+    - "Springer"
+    - "Palgrave"
+    - "Brill"
+    - "Berghahn"
+    - "SAGE"
+    - "Elsevier"
+    - "De Gruyter"
+    - "Edward Elgar"
+    - "Bristol University Press"
+    - "Manchester University Press"
+    - "Pluto"
+    - "Zed"
+    - "Verso"
+    - "James Currey"
+    - "Hurst"
+    - "Annual Reviews"
+    - "MIT Press"
+    - "Cornell"
+    - "Princeton"
+    - "Stanford"
+    - "Johns Hopkins"
+    - "Project MUSE"
+    - "Emerald"
+    - "Karthala"
+    - "Presses de Sciences Po"
+    - "Cairn"
+    - "OpenEdition"
+    - "SciELO"
+  trusted_series:
+    - "IMF Working Papers"
+    - "BIS Working Papers"
+    - "UNCTAD"
+    - "Levy Economics Institute"
+    - "Post Keynesian Economics Society"
+    - "Institute of Development Studies"
+    - "SOAS"
+  venue_denylist:
+    - "International Journal of Research and Innovation in Social Science"
+    - "International Journal of Science and Research"
+    - "Journal of Economics and Sustainable Development"
+    - "European Journal of Business and Management"
+    - "Research Journal of Finance and Accounting"
+    - "International Journal of Innovative Science and Research Technology"
+  publisher_denylist:
+    - "Scientific Research Publishing"
+    - "OMICS"
+    - "Science Publishing Group"
+    - "IISTE"
+    - "Academic Journals"
+    - "Sciencedomain"
+
+# ---------------------------------------------------------------------
+#  SCORING (density). Change with care; documented on the About page.
+# ---------------------------------------------------------------------
+scoring:
+  # anchor weight when not set by hand: min(1, (reference / citations) ** exponent)
+  weight_reference_citations: 150
+  weight_exponent: 0.5
+  weight_floor: 0.08
+  term_weight: 0.25          # per distinct term found
+  term_cap: 8                # at most this many terms count
+  trust_bonus: {watched: 0.6, trusted: 0.2, series: 0.1, repository: 0, unknown: 0}
+  review_max: {citing: 45, related: 25, candidates: 10}
+  pretick_density: 1.0       # pre-tick citing works at or above this density

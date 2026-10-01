@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block title %}Lineage: {{ L.label }} · {{ site.title }}{% endblock %}
+{% block main %}
+<section class="head"><p class="kick mono">Citation lineage</p><h1 class="h-md">{{ L.label }}</h1>
+<p class="lede narrow">{{ L.n_descendants }} works cite it in OpenAlex; together they are cited {{ L.second_generation_reach }} times. Generated {{ L.generated }}.</p>
+<p class="mono small muted narrow">{{ L.caveat }}</p></section>
+<section class="grid g2">
+  <div class="cell">
+    <div class="lab"><span>Most cited descendants</span><span>20</span></div>
+    <ol class="list">{% for d in L.top_by_citations[:20] %}<li><span class="n">{{ d.cited_by }}</span><div><a class="scholarly" href="{{ d.url }}" target="_blank" rel="noopener">{{ d.title }}</a><span class="by">{{ d.authors[:2]|join(', ') }}, {{ d.year }} · {{ d.field }}</span></div></li>{% endfor %}</ol>
+  </div>
+  <div class="cell">
+    <div class="lab"><span>Carriers</span><span>20</span></div>
+    <p class="body muted">Authors whose work citing it is most cited in turn.</p>
+    <ol class="list">{% for a in L.carriers[:20] %}<li><span class="n">{{ a.cited_by }}</span><div>{{ a.name }}<span class="by">{{ a.works }} citing work{{ 's' if a.works != 1 }} · {{ a.top }}</span></div></li>{% endfor %}</ol>
+  </div>
+</section>
+<section class="grid g2">
+  <div class="cell">
+    <div class="lab"><span>Rising (citations per year)</span><span>15</span></div>
+    <ol class="list">{% for d in L.top_by_rate[:15] %}<li><span class="n">{{ d.per_year }}</span><div><a class="scholarly" href="{{ d.url }}" target="_blank" rel="noopener">{{ d.title }}</a><span class="by">{{ d.authors[:2]|join(', ') }}, {{ d.year }}</span></div></li>{% endfor %}</ol>
+  </div>
+  <div class="cell">
+    <div class="lab"><span>Where it travels</span><span>by period</span></div>
+    <div class="tablewrap"><table class="data">
+      <thead><tr><th>Period</th><th>Fields citing it (count)</th></tr></thead>
+      <tbody>{% for p, fs in L.fields_by_period.items() %}<tr><td class="mono">{{ p }}</td><td>{% for f, n in fs.items() %}{{ f }} {{ n }}{% if not loop.last %} · {% endif %}{% endfor %}</td></tr>{% endfor %}</tbody>
+    </table></div>
+    <p class="lab" style="margin-top:24px">Second generation</p>
+    <ul class="plain">{% for s in L.second_generation_fields %}<li><em>{{ s.title }}</em>: {% for f in s.fields[:4] %}{{ f.field }} {{ f.count }}{% if not loop.last %} · {% endif %}{% endfor %}</li>{% endfor %}</ul>
+  </div>
+</section>
+{% endblock %}
