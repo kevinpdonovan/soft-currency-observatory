@@ -1,0 +1,33 @@
+# "Suggest a work" issue form -> included in the next published accessions.
+name: Suggestions
+on:
+  issues:
+    types: [opened]
+permissions:
+  contents: write
+  issues: write
+concurrency: { group: repo-write, cancel-in-progress: false }
+jobs:
+  form:
+    if: contains(github.event.issue.labels.*.name, 'suggestion')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12", cache: pip }
+      - run: pip install -r requirements.txt
+      - env:
+          BODY: ${{ github.event.issue.body }}
+          USER_LOGIN: ${{ github.event.issue.user.login }}
+        run: |
+          printf '%s' "$BODY" > form.md
+          python -m observatory suggest form.md "$USER_LOGIN"
+      - env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          git config user.name "observatory-bot"
+          git config user.email "observatory-bot@users.noreply.github.com"
+          git add data/suggestions
+          git commit -m "Suggestion: ${{ github.event.issue.title }}" || echo "nothing to commit"
+          git pull --rebase && git push
+          gh issue close ${{ github.event.issue.number }} --comment "Thanks: this will appear in the next published accessions."
