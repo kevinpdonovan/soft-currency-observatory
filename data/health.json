@@ -1,18 +1,18 @@
 {
- "period": "2026-09",
- "run_at": "2026-10-01T11:42:09",
+ "period": "2026-10",
+ "run_at": "2026-11-01T11:57:48",
  "sources": [
   {
    "source": "OpenAlex: works citing anchors",
    "ok": true,
-   "count": 455,
+   "count": 0,
    "note": "",
    "fail_streak": 0
   },
   {
    "source": "Semantic Scholar: works citing anchors",
    "ok": true,
-   "count": 451,
+   "count": 454,
    "note": "",
    "fail_streak": 0
   },
@@ -26,33 +26,33 @@
   {
    "source": "OpenAlex: keyword searches",
    "ok": true,
-   "count": 784,
+   "count": 797,
    "note": "",
    "fail_streak": 0
   },
   {
    "source": "OpenAlex: watched journals",
-   "ok": true,
-   "count": 192,
-   "note": "",
-   "fail_streak": 0
+   "ok": false,
+   "count": 0,
+   "note": "401 Client Error: Unauthorized for url: https://api.openalex.org/works?filter=from_publication_date%3A2026-09-17%2Ctype%3Aarticle%7Cpreprint%7Cbook%7Cbook-chapter%7Creport%7Creview%7Cdissertation%2Cpr",
+   "fail_streak": 1
   },
   {
    "source": "OpenAlex: watched authors",
    "ok": true,
-   "count": 5,
+   "count": 6,
    "note": "",
    "fail_streak": 0
   }
  ],
  "stats": {
-  "harvested": 1887,
+  "harvested": 1257,
   "dropped_negative": 7,
-  "duplicates": 452,
-  "already_seen": 529,
-  "failed_gate": 837,
-  "new": 62,
-  "citing": 47,
+  "duplicates": 169,
+  "already_seen": 351,
+  "failed_gate": 705,
+  "new": 25,
+  "citing": 19,
   "screened": false
  }
 }
